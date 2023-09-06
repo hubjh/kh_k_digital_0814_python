@@ -31,3 +31,25 @@ print("나이 : " + str(age))
 print("성별 : " + gender)
 print("직업 : " + jobs)
 print("주소 : " + addr)
+
+# 출력 시 정렬
+num = 10
+# < 좌측 정렬
+print("|{:<5}|".format(10))
+print(f"|{num:<5}|")
+
+# > 우측 정렬, 생략 가능
+print("|{:5}|".format(10))
+print("|{:>5}|".format(10))
+print(f"|{num:5}|")
+print(f"|{10:>5}|")
+
+# ^ 중앙 정렬
+print("|{:^6}|".format(10))
+print(f"|{num:^6}|")
+
+PI = 3.14159265
+print(f"{PI:.2f}")
+print(f"{PI:.4f}")
+
+
