@@ -1,3 +1,7 @@
+# Date : 2023-09-06
+# Author : J.H.Hwang
+# Purpose :  테스트하는 프로그램입니다.
+# ------------------------------------------------
 print("Hello, world")
 print("Hello, world")
 print(100)
