@@ -66,7 +66,7 @@
 #         print()
 
 
-# n = int(input("가운데가 빈사각형으로 별찍기 : "))
+# n = int(input("가운데가 비어있는 사각형으로 별찍기 : "))
 # for i in range(0, n):
 #     for j in range(0, n):
 #         if (0 < j < n - 1 and 0 < i < n - 1):
@@ -87,11 +87,18 @@
 #     for j in range(i + 1):
 #         print("*", end=" ")
 #     print()
-
-# n = int(input("뒤집힌 삼각형1 : "))
+#
+# n = int(input("뒤집힌 역삼각형1 : "))
 # for i in range(n):
 #     for j in range(n - i):
 #         print("*", end=" ")
+#     print()
+
+# n = int(input("뒤집힌 역삼각형2 : "))
+# for i in range(n):
+#     print("  " * i, end="")
+#     for j in range(n - i):
+#         print(" ", end="*")
 #     print()
 
 # n = int(input("아래로 뾰족한 삼각형 : "))
@@ -116,3 +123,15 @@
 #     for j in range(i + 1):
 #         print("*", end=" ")
 #     print()
+
+
+# 문자와 ASCII 코드
+# chr : 유니코드 값을 입력 받아 그 코드에 해당하는 문자를 출력
+# ord : 문자를 유니코드값으로 변환
+for i in range(ord("A"),ord("Z")+1):
+    print(chr(i), end=" ") # chr 문자 출력
+print()
+
+for i in range(65,91):#A:65 Z:90
+	print(chr(i), end=" ")
+print()
