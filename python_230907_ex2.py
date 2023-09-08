@@ -35,29 +35,29 @@
 
 
 # ======================= 숫자의 개수 ==========================
-while True:
-    a_inp = int(input("a (100 ~ 999) : "))
-    if 100 <= a_inp < 1000:
-        break
-    else:
-        print("숫자 a를 다시 입력해주세요.")
-while True:
-    b_inp = int(input("b (100 ~ 999) : "))
-    if 100 <= b_inp < 1000:
-        break
-    else:
-        print("숫자 b를 다시 입력해주세요.")
-while True:
-    c_inp = int(input("c (100 ~ 999) : "))
-    if 100 <= c_inp < 1000:
-        break
-    else:
-        print("숫자 c를 다시 입력해주세요.")
-
-rst_num = a_inp * b_inp * c_inp
-ls = str(rst_num)
-for i in range(10) :
-    print(f'{str(i)} : {ls.count(str(i))}') # 해당 문자의 개수 반환
+# while True:
+#     a_inp = int(input("a (100 ~ 999) : "))
+#     if 100 <= a_inp < 1000:
+#         break
+#     else:
+#         print("숫자 a를 다시 입력해주세요.")
+# while True:
+#     b_inp = int(input("b (100 ~ 999) : "))
+#     if 100 <= b_inp < 1000:
+#         break
+#     else:
+#         print("숫자 b를 다시 입력해주세요.")
+# while True:
+#     c_inp = int(input("c (100 ~ 999) : "))
+#     if 100 <= c_inp < 1000:
+#         break
+#     else:
+#         print("숫자 c를 다시 입력해주세요.")
+#
+# rst_num = a_inp * b_inp * c_inp
+# ls = str(rst_num)
+# for i in range(10) :
+#     print(f'{str(i)} : {ls.count(str(i))}') # 해당 문자의 개수 반환
 
 # print(f"""result_number : {rst_num}
 # 0 : {str(rst_num).count('0')}개
