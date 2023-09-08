@@ -84,12 +84,13 @@ str_name = ["seoul", "gangnam", "suwon", "inchun"]
 # for i in range(len(x)):     # 범위 기반 for문 (초기값, 최종값, 증감값)
 #     print(x[i])
 
+# map : 전달 받은 갯수를 함수 내부에서 가공해서 반환 (입력 개수와 반환 개수가 동일)
+# filter : 전달 받은 값을 함수 내부에서 조건에 일치하는 것만 골라서 반환
 
-ori_ls = input("값 : ").split()
-# odd_ls = list(map(int, list(filter(lambda e: int(e) % 2 != 0, ori_ls))))
-# even_ls = list(map(int, list(filter(lambda e: int(e) % 2 == 0, ori_ls))))
-# print(f"홀수 : {tuple(odd_ls)}")
-# print(f"짝수 : {tuple(even_ls)}")
-print(f"홀수 : {tuple(list(map(int, list(filter(lambda e: int(e) % 2 != 0, ori_ls)))))}")
-print(f"짝수 : {tuple(list(map(int, list(filter(lambda e: int(e) % 2 == 0, ori_ls)))))}")
-
+# ori_ls = input("값 : ").split()
+# # odd_ls = list(map(int, list(filter(lambda e: int(e) % 2 != 0, ori_ls))))
+# # even_ls = list(map(int, list(filter(lambda e: int(e) % 2 == 0, ori_ls))))
+# # print(f"홀수 : {tuple(odd_ls)}")
+# # print(f"짝수 : {tuple(even_ls)}")
+# print(f"홀수 : {tuple(map(int, list(filter(lambda e: int(e) % 2 == 1, ori_ls))))}")
+# print(f"짝수 : {tuple(map(int, list(filter(lambda e: int(e) % 2 == 0, ori_ls))))}")
