@@ -75,9 +75,8 @@
 # print(upper_str)
 
 print(*filter(str.isupper, input()), sep='')
-list = ['1','2','3']
+list = ['1', '2', '3']
 print(*list, sep='\n')
-
 
 # def test_arg(arg):
 #     if arg:
@@ -87,4 +86,3 @@ print(*list, sep='\n')
 #         return
 
 # print(test_arg(list))
-
