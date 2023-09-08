@@ -15,12 +15,16 @@
 
 # 대소문자 바꾸기
 # 영어 소문자와 대문자로 이루어진 단어를 입력받은 뒤, 대문자는 소문자로, 소문자는 대문자로 바꾸어 출력하는 프로그램을 작성하시오.
-rst = ""
-for e in input():   # 입력받는 문자열 개수만큼 자동 순회
-    if e.islower(): rst += e.upper()
-    else: rst += e.lower()
-print(rst)
+# rst = ""
+# for e in input():   # 입력받는 문자열 개수만큼 자동 순회
+#     if e.islower(): rst += e.upper()
+#     else: rst += e.lower()
+# print(rst)
 
 # 숫자의 개수
 # A = 150, B = 266, C = 427 이라면, A x B x C = 150 x 266 x 427 = 17037300
 # 1부터 9까지의 숫자가 각각 몇 번 쓰였는지 차례로 한 줄에 하나 씩 출력
+a, b, c = map(int, input("정수 3개 입력 : ").split())
+total_val = str(a * b * c)  # a * b * c 결과를 문자열 변환
+for i in range(10):
+    print(total_val.count(str(i)))
