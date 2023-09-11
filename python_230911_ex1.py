@@ -1,11 +1,37 @@
-def test_start():
-    test_count = int(input())
-    for _ in range(test_count):
-
 def scores_and_count():
-    input_str_list = input().split(" ")
-    input_str_list = list(map(int, input_str_list))
-    return
+    while True:
+        input_str_list = input().split(" ")
+        input_str_list = list(map(int, input_str_list))
+        if input_str_list[0] != len(input_str_list[1:]):
+            print("점수의 수가 다릅니다. 다시 입력하세요.")
+        elif [i for i in input_str_list[1:] if not 0 < i <= 100]:
+            print("100점을 초과한 값이 있습니다. 다시 입력하세요.")
+        else:
+            return input_str_list[0], input_str_list[1:]
+
+def student_filter(student_count, student_scores):
+    cnt = 0
+    for e in student_scores:
+        if e > sum(student_scores)/student_count:
+            cnt += 1
+    return round((cnt/len(student_scores) * 100), 3)
+
+def print_scores(result_list):
+    for i in result_list:
+        print(f"{i}%")
+
+
+# =========== 완성 =============
+result_list = []
+test_count = int(input())
+for _ in range(test_count):
+    student_count, student_scores = scores_and_count()
+    result = student_filter(student_count, student_scores)
+    result_list.append(result)
+print_scores(result_list)
+
+
+# ================ 맨 처음 코드 ==================
 
 # test_count = int(input())
 # result_ls = []
