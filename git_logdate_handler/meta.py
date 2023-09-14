@@ -1,8 +1,9 @@
 class MetaData:
-    def __init__(self, timezone, commit_message, git_dir, start_time_str, end_time_str):
+    def __init__(self, timezone, commit_message, git_dir, default_time, start_time_str, end_time_str):
         self.timezone = timezone
         self.commit_message = commit_message
         self.git_dir = git_dir
+        self.default_time = default_time
         self.start_time_str = start_time_str
         self.end_time_str = end_time_str
 
@@ -14,6 +15,9 @@ class MetaData:
 
     def get_git_dir(self):
         return self.git_dir
+
+    def get_default_time(self):
+        return self.default_time
 
     def get_start_time_str(self):
         return self.start_time_str

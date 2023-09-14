@@ -1,8 +1,9 @@
 {
   "setting": {
-    "time_zone" : "Asia/Seoul",
+    "time_zone" : "KST",
     "commit_message": "",
     "git_dir": "..",
+    "default_time" : "00:00:00",
     "random_option" : {
       "start_time": "20:00:00",
       "end_time": "23:59:59"

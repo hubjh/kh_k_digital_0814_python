@@ -11,6 +11,7 @@ with open('config.json', 'r') as f:
 time_zone = json_data['setting']['time_zone']
 commit_message = json_data['setting']['commit_message']
 git_dir = json_data['setting']['git_dir']
+default_time = json_data['setting']['default_time']
 start_time_str = json_data['setting']['random_option']["start_time"]
 end_time_str = json_data['setting']['random_option']["end_time"]
 
@@ -23,7 +24,7 @@ parser.add_argument('-r', '--random', required=False, action='store_true', help=
 parser.add_argument('-g', '--git', required=False, help='git의 경로를 적어주세요.')
 
 args = parser.parse_args()
-meta_data = MetaData(time_zone, commit_message, git_dir, start_time_str, end_time_str)
+meta_data = MetaData(time_zone, commit_message, git_dir, default_time, start_time_str, end_time_str)
 args_meta_data = ArgsMetaData(args.date, args.datetime, args.git, args.random)
 
 # print(args.random) # 랜덤 옵션을 넣으면 true false 중 하나 반환
@@ -31,7 +32,7 @@ args_meta_data = ArgsMetaData(args.date, args.datetime, args.git, args.random)
 # print(args.git)    # git_dir  , None
 # print(args.datetime)    # datetime  , None
 
-make_rand_datetime(meta_data, args_meta_data)
+make_git_datetime_command_str(meta_data, args_meta_data)
 
 
 
