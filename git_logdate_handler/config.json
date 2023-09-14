@@ -1,0 +1,11 @@
+{
+  "setting": {
+    "time_zone" : "Asia/Seoul",
+    "commit_message": "",
+    "git_dir": "..",
+    "random_option" : {
+      "start_time": "20:00:00",
+      "end_time": "23:59:59"
+    }
+  }
+}
