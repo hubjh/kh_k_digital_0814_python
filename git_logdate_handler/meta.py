@@ -1,11 +1,14 @@
 class MetaData:
     def __init__(self, timezone, commit_message, git_dir, default_time, start_time_str, end_time_str):
-        self.timezone = timezone
+        self._timezone = timezone
         self.commit_message = commit_message
         self.git_dir = git_dir
         self.default_time = default_time
         self.start_time_str = start_time_str
         self.end_time_str = end_time_str
+
+    def timezone(self):
+        return self._timezone
 
     def get_timezone(self):
         return self.timezone
@@ -27,11 +30,12 @@ class MetaData:
 
 
 class ArgsMetaData:
-    def __init__(self, date, datetime, git, rand):
+    def __init__(self, date, datetime, git, rand, message):
         self.date = date
         self.datetime = datetime
         self.git = git
         self.rand = rand
+        self.message = message
 
     def get_date(self):
         return self.date
@@ -44,4 +48,7 @@ class ArgsMetaData:
 
     def get_rand(self):
         return self.rand
+
+    def get_message(self):
+        return self.message
 

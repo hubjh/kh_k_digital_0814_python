@@ -1,10 +1,11 @@
 from datetime import datetime, timedelta
 import pytz
 import random
+import os
 
 
 
-def make_git_datetime_command_str(meta, args):
+def make_git_datetime_command(meta, args):
     # start_time = meta.get_start_time_str()
     # end_time = meta.get_end_time_str()
     # # print(meta.get_timezone())
@@ -13,6 +14,7 @@ def make_git_datetime_command_str(meta, args):
     args_git = args.get_git()
     # args_deft = args.get_default_time()
     args_rand = args.get_rand()
+    # print(args.get_message())
 
     # print(args_git,"g - r", args_rand)
 
@@ -92,5 +94,26 @@ def validate_datetime(datetime_string):
     except ValueError:
         return False  # 날짜 형식이 일치하지 않음
 
-def make_git_command():
-    pass
+def validate_git_command(command: str):
+    try:
+        if command:
+            return command
+    except ValueError:
+        return False
+
+def make_git_command(meta, args):
+    datetime_command_str = make_git_datetime_command(meta, args)
+
+    if validate_git_command(datetime_command_str):
+        if args.get_message():
+            return f'git commit --amend --date "{datetime_command_str}" -m "{args.get_message()}"'
+        elif meta.get_commit_message():
+            return f'git commit --amend --date "{datetime_command_str}" -m "{meta.get_commit_message()}"'
+        else:
+            return f'git commit --amend --date "{datetime_command_str}"'
+
+
+
+# 커멘드라인에 만든 커맨드메시지를 쏴주는 함수
+# def
+
